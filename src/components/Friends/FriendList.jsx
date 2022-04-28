@@ -1,8 +1,9 @@
 import { FriendListItem } from "./FriendListItem"
+import s from "../Friends/FriendList.module.css"
 
 export function FriendList(props){
     return (
-        <ul className="friend-list">
+        <ul className={s.friendsList}>
             {props.items.map((item) =>
                 <FriendListItem
                 key={item.id}

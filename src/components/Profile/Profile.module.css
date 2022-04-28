@@ -1,0 +1,23 @@
+.profile{
+    text-align: center;
+    display: flex;
+    margin-top: 200px;
+}
+.avatar{
+    display: block;
+    width: 100%;
+}
+.name{
+    font-size: 60px;
+}
+.tag{
+    color: blue;    
+}
+.stats{
+    margin-top: 35px;
+    list-style: none;
+}
+.label{
+    color: red;
+    margin-right: 30px;
+}

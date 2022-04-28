@@ -1,0 +1,22 @@
+.statistics{
+    margin-top: 200px;
+}
+.title{
+    text-align: center;
+}
+.statList{
+    display: flex;  
+    justify-content: center;  
+    font-size: 30px;
+    list-style: none;   
+    margin-right:  auto;
+    margin-left: auto; 
+    }
+.item{
+    margin-right: 20px;
+    text-align: center;
+}
+.label{
+    color: blue;
+    display: block;
+}
