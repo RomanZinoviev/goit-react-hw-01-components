@@ -36,11 +36,7 @@ export const App = () => {
       items={friends}
       />
       <TransactionHistory
-        items={transactions}
-        type={transactions.type}
-        amount={transactions.amount}
-        currency={transactions.currency}
-        key={transactions.id}
+        items={transactions}        
       />
     </div>
   );
