@@ -19,3 +19,6 @@ export function Statistics(props) {
 </section>
     )
 } 
+Statistics.propTypes = {
+    data:PropTypes.array
+}

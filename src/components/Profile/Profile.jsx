@@ -15,7 +15,7 @@ export function Profile(props) {
   <ul className={s.stats}>
           <li>
              <p className={s.name}>{props.username}</p>
-    <p className={s.tag}>{props.tag}</p>
+    <p className={s.tag}>@{props.tag}</p>
     <p className={s.location}>{props.location}</p>
       <span className={s.label}>Followers</span>
       <span className={s.quantity}>{props.stats.followers}</span>
