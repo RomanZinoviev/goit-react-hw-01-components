@@ -7,7 +7,7 @@ export function Profile(props) {
   <div className={s.description}>
     <img
       src={props.avatar}
-      alt="User avatar"
+      alt="User avatarr"
       className={s.avatar}
     />   
   </div>
