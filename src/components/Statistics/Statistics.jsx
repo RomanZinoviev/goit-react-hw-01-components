@@ -3,16 +3,16 @@ import { StatItem } from './StatItem';
 import s from "./Statistics.module.css"
 
 
-export function Statistics(props) {
+export function Statistics({title, data}) {
     return (
         <section className={s.statistics}>
-  <h2 className={s.title}>Upload stats</h2>
+            {title ? <h2 className={s.title}>{title}</h2> : ""}
             <ul className={s.statList}>
-                {props.data.map((dat) => 
+                {data.map(({id,label,percentage}) => 
                     <StatItem
-                        key={dat.id}
-                        label={dat.label}
-                        percentage={dat.percentage}
+                        key={id}
+                        label={label}
+                        percentage={percentage}
                     />
                 )}
   </ul>
@@ -20,5 +20,6 @@ export function Statistics(props) {
     )
 } 
 Statistics.propTypes = {
-    data:PropTypes.array
+    data: PropTypes.array.isRequired,
+    title:PropTypes.string
 }

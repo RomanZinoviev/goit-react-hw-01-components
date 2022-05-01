@@ -13,36 +13,36 @@ export function TransactionHistory({items}) {
   </thead>
 
   <tbody>
-          {items.map((item) =>
+          {items.map(({id,type,amount,currency}) =>
             <Transaction
-              key={item.id}
-              type={item.type}
-              amount={item.amount}
-              currency={item.currency}
+              key={id}
+              type={type}
+              amount={amount}
+              currency={currency}
             />)}    
   </tbody>
 </table>
     )
 }
-function Transaction(props) {
+function Transaction({id,type,amount,currency}) {
   return (
-    <tr key={props.id}>
-      <td>{props.type}</td>
-      <td>{props.amount}</td>
-      <td>{props.currency}</td>
+    <tr key={id}>
+      <td>{type}</td>
+      <td>{amount}</td>
+      <td>{currency}</td>
     </tr>
   )
 }
 
 TransactionHistory.propTypes = {
-  items: PropTypes.array
+  items: PropTypes.array.isRequired
 }
 Transaction.propTypes = {
-     type: PropTypes.string,
-    amount: PropTypes.string,
-      currency: PropTypes.string,
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.string.isRequired,
+    currency: PropTypes.string.isRequired,
     id:PropTypes.string
-  }  
+}  
        
       
       

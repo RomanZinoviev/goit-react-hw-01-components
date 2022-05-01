@@ -2,17 +2,17 @@ import PropTypes from 'prop-types';
 import s from "./Statistics.module.css"
 
 
-export function StatItem(props) {
+export function StatItem({id,label,percentage}) {
     return (
-        <li className={s.item} key={props.id}>
-      <span className={s.label}>{props.label}</span>
-      <span className={s.percentage}>{props.percentage}</span>
+        <li className={s.item} key={id}>
+      <span className={s.label}>{label}</span>
+      <span className={s.percentage}>{percentage}</span>
     </li>
     )
 }
 
 StatItem.propTypes = {
     id:PropTypes.string,
-    label: PropTypes.string,
-    percentage:PropTypes.number
+    label: PropTypes.string.isRequired,
+    percentage:PropTypes.number.isRequired
 }
